@@ -5,7 +5,7 @@ name: Swift
 
 on:
   push:
-    branches: [ "vinoothna/add-tests" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -13,8 +13,17 @@ jobs:
   build:
 
     runs-on: macos-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     steps:
     - uses: actions/checkout@v3
+    - name: install Dependencies
+      working-directory: ./mockserver
+      run: npm install
+    - name: RUN FIle mockServer.js
+      working-directory: ./mockserver
+      run: nohup node mockServer.js &
     - name: Build
       working-directory: ./MyLibrary
       run: swift build -v
