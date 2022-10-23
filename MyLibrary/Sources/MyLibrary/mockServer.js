@@ -7,10 +7,6 @@ app.get('/data/2.5/weather', (request, response) => {
   );
 });
 
-
-
-
-
 app.listen(3000, () => {
     console.log("Listen to port 3000")
 });
