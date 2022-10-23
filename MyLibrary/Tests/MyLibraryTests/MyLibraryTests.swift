@@ -138,7 +138,7 @@ final class MyLibraryTests: XCTestCase {
     
     //Integration Test
     func testWeatherService() async {
-        let weatherService = WeatherServiceImpl(baseUrl: BaseUrl.openweathermap)
+        let weatherService = WeatherServiceImpl(baseUrl: BaseUrl.mockServer)
         
         let temp = try? await weatherService.getTemperature()
         
