@@ -5,7 +5,7 @@ name: Swift
 
 on:
   push:
-    branches: [ "vinoothna/add-tests" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -20,7 +20,7 @@ jobs:
       working-directory: ./MyLibrary
       run: swift build -v
     - name: RunMockServer
-      working-directory: ./MyLibrary/Sources/MyLibrary
+      working-directory: ./MyLibrary
       run: node mockServer.js
     - name: Run tests
       working-directory: ./MyLibrary
