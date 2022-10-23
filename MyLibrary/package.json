@@ -1,0 +1,14 @@
+{
+  "name": "mylibrary",
+  "version": "1.0.0",
+  "description": "A description of this package.",
+  "main": "mockServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
