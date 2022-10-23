@@ -21,7 +21,7 @@ jobs:
       run: swift build -v
     - name: RunMockServer
       working-directory: ./MyLibrary
-      run: node mockServer.js
+      run: package.json
     - name: Run tests
       working-directory: ./MyLibrary
       run: swift test -v
