@@ -19,10 +19,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: install Dependencies
-      working-directory: ./mockserver
+      working-directory: ./mockServer
       run: npm install
     - name: RUN FIle mockServer.js
-      working-directory: ./mockserver
+      working-directory: ./mockServer
       run: nohup node mockServer.js &
     - name: Build
       working-directory: ./MyLibrary
