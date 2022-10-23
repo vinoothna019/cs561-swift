@@ -20,7 +20,7 @@ jobs:
       working-directory: ./MyLibrary
       run: swift build -v
     - name: RunMockServer
-      working-directory: ./MyLibrary
+      working-directory: ./MyLibrary/Sources/MyLibrary
       run: node mockServer.js
     - name: Run tests
       working-directory: ./MyLibrary
